@@ -5,44 +5,6 @@
  * replaces malloc/calloc/realloc/free functions to debug memory allocation
  *
  * $Log: memguard.cc,v $
- * Revision 1.14  2016/02/29 12:15:40  makki
- * Cleanup error messages
- *
- * Revision 1.13  2016/02/25 13:06:50  makki
- * Fixes for MBT crash and DDM type
- *
- * Revision 1.12  2014/12/16 11:20:41  makki
- * Restored the feature to compile on linux (CentOS 6.5)
- *
- * Revision 1.11  2011/01/04 19:55:08  makki
- * fix for memory bugs reported by glibc
- *
- * Revision 1.10  2010/01/25 14:09:08  makki
- * Added safe strlen() and fclose()
- *
- * Revision 1.9  2010/01/20 10:15:16  makki
- * crash fix : handle strlen(null)
- *
- * Revision 1.8  2009/04/01 16:35:32  makki
- * Minore upgrade for memguard
- *
- * Revision 1.7  2009/03/27 18:57:36  makki
- * fix memory leaking in scheduler.cc:SchedStartTC(466)
- *
- * Revision 1.6  2009/03/25 20:53:16  makki
- * Improved MemGuard debug feature
- *
- * Revision 1.5  2008/12/05 10:44:32  makki
- * improved debug
- *
- * Revision 1.4  2008/12/01 14:21:11  makki
- * Fixing realloc in memeguard: do not call realloc for 1st allocation and to degrease the block
- *
- * Revision 1.3  2008/10/02 19:33:56  makki
- * re-designed memguard feature
- *
- * Revision 1.2  2008/09/30 16:16:58  makki
- * restored linux compatibility
  *
  * Revision 1.1  2008/05/07 07:26:38  makki
  * Initial release
@@ -610,3 +572,4 @@ int MGfclose(const char *FLE, unsigned long LINE, FILE *n)
 #endif /* LINUX */
 
 // *INDENT-ON*
+
