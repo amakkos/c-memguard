@@ -9,7 +9,6 @@
  * Revision 1.1  2008/05/07 07:26:38  makki
  * Initial release
  *
- *
  */
 
 // *INDENT-OFF*
@@ -33,18 +32,6 @@ const char *Level[] = {"warning", "error"};
 
 #define MEM_BLOCK_ATOM 128	/* atomic memory block size - save CPU time to allocate more than req.	*/
 				/* possibly we can skip next (or a few) realloc call(s)			*/
-
-/*
-  TODO - improve statistics
-static unsigned long mg_MaxBlocks = 0;
-static unsigned long mg_MaxAllocation = 0;
-static unsigned long mg_CurBlocks = 0;
-static unsigned long mg_CurAllocation = 0;
-static unsigned long mg_Allocations = 0;
-static unsigned long mg_Frees = 0;
-static unsigned long mg_TotalAllocation = 0;
-static unsigned long mg_AllocationLimit = 0xffffffff;
-*/
 
 #ifdef MG_FLAG_STRUCT
 unsigned long MG_CHECK_PATT=0xdeadbeef;	/* pattern to be saved at the end of allocated memory - checked at release */
@@ -572,4 +559,5 @@ int MGfclose(const char *FLE, unsigned long LINE, FILE *n)
 #endif /* LINUX */
 
 // *INDENT-ON*
+
 
